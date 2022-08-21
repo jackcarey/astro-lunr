@@ -1,6 +1,6 @@
 # astro-lunr
 
-Integration for building LunrJS index for Astro websites.
+Integration for building LunrJS index for Astro websites. Index items include text content underneath each heading tag.
 
 - [Astro](https://astro.build/)
 - [Lunr](https://lunrjs.com/)
@@ -26,6 +26,16 @@ npm i @jackcarey/astro-lunr
 
 Each entry in `search_index.json` contains `loc`, `title`, and `content` properties.
 
+*dist/some-path/index.html*
+```
+//...
+<h2>Foo</h2>
+<p>The text underneath the foo heading.</p>
+<h2>Bar</h2>
+<p>The text underneath the bar heading.</p>
+//...
+```
+
 *search_index.json*
 ```
 [
@@ -33,6 +43,11 @@ Each entry in `search_index.json` contains `loc`, `title`, and `content` propert
         "loc": "/some-path#foo",
         "title": "Foo Heading",
         "content": "The text underneath the foo heading."
+    },
+    {
+        "loc": "/some-path#bar",
+        "title": "Bar Heading",
+        "content": "The text underneath the bar heading."
     }
 ]
 ```
