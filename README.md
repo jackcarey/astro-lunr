@@ -54,11 +54,11 @@ Each entry in `search_index.json` contains `loc`, `title`, and `content` propert
 
 ### Configuration
 
-There are three functions you can pass to configure the index. Each function must return a boolean for whether or not it is included in the search index.
+There are four functions you can pass to configure the index. Each function must return a boolean for whether or not it is included in the search index.
 
 - **routeFilter** - A regular JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) that accepts [Astro RouteData](https://docs.astro.build/en/reference/integrations-reference/#routes-option) as input. 
 - **resultFilter** - A regular JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) that accepts index items as input.
-- **headingFilter** - Uses a [Cheerio filter](https://cheerio.js.org/classes/Cheerio.html#filter) against each heading tag.
+- **headingFilter** - Uses a [Cheerio filter](https://cheerio.js.org/classes/Cheerio.html#filter) against each heading tag. The default filter ignores headings that appear inside `<header/>` or `<nav/>` tags.
 - **contentFilter** - Uses a [Cheerio filter](https://cheerio.js.org/classes/Cheerio.html#filter) against the content below each heading.
 
 ### Client-side
