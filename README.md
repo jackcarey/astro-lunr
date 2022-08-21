@@ -1,6 +1,6 @@
 # astro-lunr
 
-Components for enabling LunrJS for Astro websites.
+Integration for building LunrJS index for Astro websites.
 
 - [Astro](https://astro.build/)
 - [Lunr](https://lunrjs.com/)
