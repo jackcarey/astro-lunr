@@ -29,9 +29,9 @@ Each entry in `search_index.json` contains `loc`, `title`, and `content` propert
 *dist/some-path/index.html*
 ```
 //...
-<h2>Foo</h2>
+<h2>Foo Heading</h2>
 <p>The text underneath the foo heading.</p>
-<h2>Bar</h2>
+<h2>Bar Heading</h2>
 <p>The text underneath the bar heading.</p>
 //...
 ```
