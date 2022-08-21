@@ -1,6 +1,6 @@
 {
     "name": "@jackcarey/astro-lunr",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "An Astro integration to generate Lunr search index at build time",
     "type": "module",
     "types": "./dist/index.d.ts",

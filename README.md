@@ -22,8 +22,32 @@ npm i @jackcarey/astro-lunr
 ```
 ## Usage
 
+### Index items
+
 Each entry in `search_index.json` contains `loc`, `title`, and `content` properties.
 
-This package doesn't provide a component yet, so use the[LunrJS documentation](https://lunrjs.com/guides/getting_started.html) to integrate a search into your site.
+*search_index.json*
+```
+[
+    {
+        "loc": "/some-path#foo",
+        "title": "Foo Heading",
+        "content": "The text underneath the foo heading."
+    }
+]
+```
+
+### Configuration
+
+There are three functions you can pass to configure the index. Each function must return a boolean for whether or not it is included in the search index.
+
+- **routeFilter** - A regular JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) that accepts [Astro RouteData](https://docs.astro.build/en/reference/integrations-reference/#routes-option) as input. 
+- **resultFilter** - A regular JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) that accepts index items as input.
+- **headingFilter** - Uses a [Cheerio filter](https://cheerio.js.org/classes/Cheerio.html#filter) against each heading tag.
+- **contentFilter** - Uses a [Cheerio filter](https://cheerio.js.org/classes/Cheerio.html#filter) against the content below each heading.
+
+### Client-side
+
+This package doesn't provide a component yet, so use the [LunrJS documentation](https://lunrjs.com/guides/getting_started.html) to integrate a search input into your site.
 
 
