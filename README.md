@@ -1,3 +1,5 @@
+⚠️ this integration isn't finished yet and I don't know when it will be. The code might still be useful for others developing similar functionality, so it'll stay up until I can get back to it.
+
 # astro-lunr
 
 Integration for building LunrJS index for Astro websites. Index items include text content underneath each heading tag.
